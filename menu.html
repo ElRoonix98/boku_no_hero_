@@ -3,6 +3,22 @@
 <head>
 	<title>My Hero Academia</title>
 	<meta name = "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript">
+		
+		function checkPlay(){
+			var MyVideo = document.getElementById("MyVid");
+			try{
+				var canPlay = document.getElementByTagName('video')[0].canPlayType("video/mp4");
+				if((canPlay=="no")||(canPlay=="")){
+					alert("A ocurrido un error");
+				}
+			}
+			catch(err){
+				alert("A ocurrido un error");
+			}
+		}
+
+	</script>
 </head>
 
 <body>
@@ -12,12 +28,12 @@
 		<nav>
 			<ul>
 				<h6>
-					<a href="" style="visibility: hidden;">_</a></li>
+					<li style="visibility: hidden;"><a href="" style="visibility: hidden;">__</a></li>
 					<li><a href="#"><font color = "white"><span class="icon-home3"></span> Inicio</font></a></li>
 					<li><a href="#"><font color = "white"><span class="icon-film"></span> Temporadas</font></a></li>
 					<li><a href="#"><font color = "white"><span class="icon-video-camera"></span> Peliculas</font></a></li>
 					<li><a href="#"><font color = "white"><span class="icon-star-full"></span> Ovas</font></a></li>
-					<a href="" style="visibility: hidden;">__</a></li>
+					<li style="visibility: hidden;"><a href="" style="visibility: hidden;">__</a></li>
 				</h6>
 			</ul>
 		</nav>
@@ -31,7 +47,7 @@
 			<br><br>
 
 			<video controls id = "MyVid">
-					<source align = "center" src = "Intro/Deku Version_RollingGirl.mp4" type = "video/mp4">
+					<source align = "center" src = "Intro/Deku Version_RollingGirl.mp4" type = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			</video>
 
 			<br><br>
@@ -132,8 +148,8 @@ nav {
 	
 		nav ul li {
 			display: inline-block;
-			line-height: 62.5px;
-			border: white 1px solid;
+			line-height: 50px;
+			border: white .5px solid;
 		}
 			
 			nav ul li a {
